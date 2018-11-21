@@ -1,0 +1,19 @@
+<div id="main">
+    <div *ngIf="state" id="main-noBook">
+        <div><img src="assets/img/book.jpg"></div>
+        <div>暂无待配送图书</div>
+      </div>
+
+    <div class="item" *ngFor="let item of borrowBooks;let i=index;">
+      <dl class="clearfix" >
+      <dt><img src="{{item.BookImage}}" [routerLink]="['../../detail',{bookId:item.BookId}]"/></dt>
+      <dd>{{item.BookName}}</dd>
+      <dd>{{item.AuthorName}}</dd>
+      <dd>{{item.PublisherName}}</dd>
+      <dd>{{item.CreateTime|date:'yyyy-MM-dd'}}</dd>
+      <dd><button class="btn btn-primary" (click)="btnCancel_onclick(item,i)">取消</button></dd> 
+    </dl>
+  </div>
+</div>
+
+<app-alert-dialog #alertDialog [message]="data"></app-alert-dialog>

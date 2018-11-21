@@ -1,0 +1,11 @@
+<div id="top"><i class="fa fa-arrow-left" [routerLink]="['../main/mine']"></i>我的</div>
+<div id="main">
+  <div class="clearfix clear-fix"><label>头像</label> <img src="assets/img/head.jpg"></div>
+  <div><label>姓名</label> <span>{{user.Name}}&nbsp;<i class="glyphicon glyphicon-menu-right" [routerLink]="['../member']"></i></span></div>
+  <div><label>性别</label> <span>女</span></div>
+  <div><label>昵称</label> <span>Evelyn</span></div>
+  <div><label>二维码</label> <img src="{{imgPath}}" (click)="btnLargerImg_onclick()"></div>
+  <div><button class="btn btn-danger" (click)="btnLogout_onclick()">注销</button></div>
+</div>
+<app-img-page #imgDialog></app-img-page>
+

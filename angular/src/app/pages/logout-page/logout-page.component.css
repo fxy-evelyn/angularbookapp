@@ -1,0 +1,73 @@
+#top{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  height: 48px;
+  line-height: 48px;
+  background: #336699;
+  text-align: center;
+  color: white;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+#top>i{
+  float: left;
+  margin: 14px 0px 14px 14px;
+  font-size: 20px;
+}
+#main{
+  position: absolute;
+  top:48px;
+  left:0;
+  right:0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /*background: #f0f0f0;*/
+}
+#main>div:not(:last-child){
+  width: 90%;
+  margin: auto;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  color: #333333;
+}
+#main>div:not(:last-child)>span{
+  float: right;
+  color: #999999;
+  font-size: 14px;
+}
+#main>div:nth-child(1),#main>div:nth-child(5){
+  height: 50px;
+  line-height: 50px;
+}
+#main>div:nth-child(1)>img{
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+  border-radius: 50%;
+  display: block;
+  float: right;
+}
+#main>div:nth-child(5)>img{
+   width: 40px;
+   height: 40px;
+   margin-top: 5px;
+   display: block;
+   float: right;
+ }
+#main>div:last-child>button{
+  width: 90%;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 0;
+}

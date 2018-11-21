@@ -1,0 +1,23 @@
+<div id="top"><i class="fa fa-arrow-left" (click)="location.back()"></i>用户登录</div>
+<div id="main">
+  <div id="main-top">
+    <div>
+      <i class="fa fa-user"></i><input type="text" placeholder="请输入手机号码" [(ngModel)]="param.phone">
+      <span>{{lblPhone}}</span>
+    </div>
+    <div>
+      <i class="fa fa-lock"></i><input type="password" placeholder="请输入密码" [(ngModel)]="param.password">
+      <span>{{lblPassword}}</span>
+    </div>
+    <div><a>没有账号？点击注册</a><label [routerLink]="['../code']">忘记密码？</label></div>
+    <div><button class="btn btn-primary" (click)="btnLogin_onclick()">登录</button></div>
+  </div>
+
+  <div id="main-bottom">
+    <p>友情提示：</p>
+    <ol type="1">
+      <li>登录凭证到市图书馆或各区分馆办理</li>
+      <li>办理借书业务时，需要携带身份证</li>
+    </ol>
+  </div>
+</div>

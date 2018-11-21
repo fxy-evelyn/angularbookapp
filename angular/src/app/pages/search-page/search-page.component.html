@@ -1,0 +1,13 @@
+<div id="top">
+  <i class="fa fa-arrow-left" [routerLink]="['../main']"></i>
+  <div id="search-box">
+    <input type="text" placeholder="请输入图书的名字/ISBN" [(ngModel)]="keyword">
+  </div>
+  <i class="glyphicon glyphicon-search" (click)="btnSearch_onclick()"></i>
+</div>
+<div id="main">
+  <div class="clearfix">搜索历史 <i class="fa fa-trash-o" (click)="btnClearKeyword_onclick()"></i></div>
+  <div>
+    <div class="item" *ngFor="let item of keywordList" (click)="btnKey_onclick(item)">{{item}}</div>
+  </div>
+</div>

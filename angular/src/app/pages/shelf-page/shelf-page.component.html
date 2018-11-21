@@ -1,0 +1,36 @@
+<!-- <div id="top"><i class="fa fa-arrow-left" [routerLink]="['../main/mine']"></i>借书架</div> -->
+<div id="top"><i class="fa fa-arrow-left" (click)="location.back()"></i>借书架</div>
+<div id="main">
+  <div *ngIf="state" id="main-noBook">
+    <div><img src="../../../assets/img/book.jpg"></div>
+    <div [routerLink]="['../main']">暂无图书，赶紧去看看</div>
+  </div>
+
+  <!--<div class="item" *ngFor="let item of shelfBooks;let i=index">-->
+      <!--<dl class="clearfix" >-->
+        <!--<dt><input type="checkbox"></dt>-->
+        <!--<dd><img src="{{item.Book.Image}}"/></dd>-->
+        <!--<dd>{{item.Book.Name}}</dd>-->
+        <!--<dd>{{item.Book.Author.Name}}</dd>-->
+        <!--<dd>{{item.Book.Publisher.Name}}</dd>-->
+        <!--<dd><i class="fa fa-trash-o" (click)="btnRemove_onclick(item,i)"></i></dd>-->
+      <!--</dl>-->
+    <!--</div>-->
+
+  <div class="item" *ngFor="let item of shelfBooks;let i=index">
+    <dl class="clearfix" >
+      <dt><img src="{{item.Book.Image}}" [routerLink]="['../detail',{bookId:item.Book.Id}]"/></dt>
+      <dd>{{item.Book.Name}}</dd>
+      <dd>{{item.Book.Author.Name}}</dd>
+      <dd>{{item.Book.Publisher.Name}}</dd>
+      <dd><i class="fa fa-trash-o" (click)="btnRemove_onclick(item,i)"></i></dd>
+    </dl>
+  </div>
+
+</div>
+<div id="footer">
+  <!--<div><span><input type="checkbox">全选</span>  <span>共计：3本</span></div>-->
+  <div (click)="btnRemoveAll_onclick()">全部删除</div>
+  <div (click)="btnSubmitOrder_onclick()">提交订单</div>
+</div>
+

@@ -1,0 +1,26 @@
+<div id="top">分类</div>
+<div id="main">
+
+  <!--<div class="item" *ngFor="let item of categories;let i=index;">-->
+    <!--<dl>-->
+      <!--<dt><img src="{{item.Image}}"></dt>-->
+      <!--<dd><span>{{item.Name}}</span><span>共计：本</span></dd>-->
+      <!--<dd><i class="glyphicon glyphicon-menu-right"></i></dd>-->
+    <!--</dl>-->
+  <!--</div>-->
+
+  <!--<div class="item" *ngFor="let item of categories;let i=index;">-->
+    <!--<div>-->
+      <!--<div><img src="{{item.Image}}"></div>-->
+      <!--<div>{{item.Name}}</div>-->
+    <!--</div>-->
+  <!--</div>-->
+
+
+  <!--<div class="item">-->
+    <!--<div>全部分类</div>-->
+  <!--</div>-->
+  <div class="item" *ngFor="let item of categories">
+    <div (click)="btnBookList_onclick(item)">{{item.Name}}</div>
+  </div>
+</div>

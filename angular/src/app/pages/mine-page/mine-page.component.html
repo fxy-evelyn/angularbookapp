@@ -1,0 +1,21 @@
+<div id="top">我的</div>
+<div id="main">
+  <div id="login-image" >
+    <div id="image" ><img src="{{srcPath}}"></div>
+    <div><span (click)="btnLogin_onclick()">{{userName}}</span></div>
+  </div>
+
+  <div id="body">
+    <div [routerLink]="['/shelf']"><p><i class="glyphicon glyphicon-stats"></i> 我的借书架</p><i class="glyphicon glyphicon-menu-right"></i></div>
+    <div [routerLink]="['/borrowRecord']"><p><i class="fa fa-book"></i> 我的借阅</p><i class="glyphicon glyphicon-menu-right"></i></div>
+    <div><p><i class="glyphicon glyphicon-map-marker"></i> 管理地址</p><i class="glyphicon glyphicon-menu-right"></i></div>
+  </div>
+
+  <div id="bottom">
+    <div><p><i class="fa fa-pencil-square-o"></i> 软件反馈</p><i class="glyphicon glyphicon-menu-right"></i></div>
+    <div><p><i class="fa fa-question-circle-o"></i> 常见问题</p><i class="glyphicon glyphicon-menu-right"></i></div>
+    <div><p><i class="fa fa-commenting-o"></i> 关于软件</p><i class="glyphicon glyphicon-menu-right"></i></div>
+    <div><p><i class="fa fa-spinner"></i> 清除缓存</p><i class="glyphicon glyphicon-menu-right"></i></div>
+    <div [routerLink]="[ '/logout']"><p><i class="fa fa-power-off"></i> 注销</p><i class="glyphicon glyphicon-menu-right"></i></div>
+  </div>
+</div>

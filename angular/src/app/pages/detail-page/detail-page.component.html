@@ -1,0 +1,25 @@
+<div id="top"><i class="fa fa-arrow-left" (click)="location.back()"></i>图书详情</div>
+<div id="main">
+  <div id="image">
+    <div>
+      <img src="{{tempBook.Image}}"/>
+    </div>
+  </div>
+  <div id="main-body-header">
+    <h4>&lt;&lt;{{tempBook.Name}}&gt;&gt;的详情</h4>
+  </div>
+  <div id="main-body-content">
+    <div><label>书&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</label><span>{{tempBook.Name}}</span></div>
+    <div><label>作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;者：</label><span>{{tempBook.AuthorName}}</span></div>
+    <div><label>出版社名：</label><span>{{tempBook.PublisherName}}</span></div>
+    <div><label>出版日期：</label><span>{{tempBook.PublishDate}}</span></div>
+    <div><label>库存数量：</label><span>{{tempBook.Number}}/{{tempBook.DetailLength}}</span></div>
+    <div><label>简&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;介：</label><span>{{tempBook.Introduce}}</span></div>
+</div>
+</div>
+<div id="footer">
+  <div [routerLink]="['../shelf']"><i class="glyphicon glyphicon-stats"></i> 借书架<div>{{borrowBookCount}}</div></div>
+  <div (click)="btnAddBook_onclick(tempBook.Id)" [ngClass]="{'havebook':tempBook.Number!=0,'nobook':tempBook.Number==0}">{{tempBook.Number==0?"暂无库存":"加入书架"}}</div>
+</div>
+
+<app-alert-dialog #alertDialog [message]="data"></app-alert-dialog>

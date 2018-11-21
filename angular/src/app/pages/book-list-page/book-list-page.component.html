@@ -1,0 +1,17 @@
+<div id="top"><i class="fa fa-arrow-left" (click)="location.back()"></i>图书列表</div>
+<div id="main">
+  <div *ngIf="state" id="main-noBook">
+    <div><img src="assets/img/book.jpg"></div>
+    <div>暂无此类图书</div>
+  </div>
+  <div class="item" *ngFor="let item of books;let i=index;" >
+    <dl class="clearfix">
+      <dt><img src="{{item.Book.Image}}"/></dt>
+      <dd>{{item.Book.Name|remark}}</dd>
+      <dd>{{item.Book.Author.Name}}</dd>
+      <dd>{{item.Book.PublishDate}}</dd>
+      <dd>{{item.Book.Publisher.Name}}</dd>
+      <dd [routerLink]="['../detail',{bookId:item.Book.Id}]"><i class="glyphicon glyphicon-menu-right"></i></dd> 
+    </dl>
+  </div>
+</div>

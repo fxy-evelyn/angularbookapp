@@ -1,0 +1,74 @@
+#top{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  height: 48px;
+  line-height: 48px;
+  background: #336699;
+  text-align: center;
+  color: #999;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+#search-box{
+  font-size: 14px;
+  background: white;
+  width: 240px;
+  height: 30px;
+  line-height: 30px;
+  margin: 9px auto;
+  display: inline-block;
+}
+#top i:nth-of-type(1){
+  color: white;
+  font-size: 20px;
+  float: left;
+  margin: 14px 0px 14px 14px;
+}
+#top >i:nth-of-type(2){
+  color: white;
+  font-size: 20px;
+  position: relative;
+  top:5px;
+  left:15px;
+}
+#search-box>input{
+  width: 200px;
+  height: 30px;
+  border: 0;
+  outline: none;
+}
+
+#main{
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top:48px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+}
+#main>div:first-child{
+  padding: 15px 15px 10px 15px;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  color: #999;
+  font-weight: bold;
+  font-size: 14px;
+}
+#main>div:first-child>i{
+  float: right;
+  margin-right: 10px;
+}
+#main>div:nth-child(2){
+  margin-top: 5px;
+  font-size: 14px;
+}
+#main>div:nth-child(2)>.item{
+  background: #336699;
+  color: white;
+  margin: 10px 5px 5px 10px;
+  display: inline-block;
+  padding: 10px;
+}

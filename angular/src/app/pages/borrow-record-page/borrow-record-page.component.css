@@ -1,0 +1,50 @@
+#top{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    height: 48px;
+    line-height: 48px;
+    background: #336699;
+    text-align: center;
+    color: white;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  #top>i{
+    float: left;
+    margin: 14px 0px 14px 14px;
+    font-size: 20px;
+  }
+  #main{
+    position: absolute;
+    top:48px;
+    left:0;
+    right:0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /*background: #f0f0f0;*/
+  }
+  #main-nav{
+      height: 36px;
+      line-height: 36px;
+  }
+  #main-nav>ul{
+      display: flex;
+      text-align: center;
+  }
+  #main-nav>ul>li{
+    flex:1;
+    color: #333333;
+  }
+  #main-nav>ul>li.active{
+    color: #336699;
+    border-bottom: 2px solid #336699;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+
+  

@@ -1,0 +1,30 @@
+*{
+  padding:0;
+  margin: 0;
+}
+#dialog{
+  position: fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background-color: rgba(0,0,0,0.3);
+}
+#dialog>div{
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background-color:#fff;
+  margin: auto;
+  width:240px;
+  height:240px;
+  border:1px solid #999;
+}
+#dialog>div>img{
+  width: 100%;
+  height: 100%;
+}
+
+

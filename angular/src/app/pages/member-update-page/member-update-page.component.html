@@ -1,0 +1,6 @@
+<div id="top"><i class="fa fa-arrow-left" (click)="location.back()"></i>用户信息</div>
+<div id="main">
+  <div><label>姓名</label><input type="text" [(ngModel)]="name" readonly></div>
+  <div><label>身份证号码</label><input type="text" [(ngModel)]="cardId" readonly></div>
+  <div><button class="btn btn-primary" (click)="btnConfirm_onclick()">确定</button></div>
+</div>

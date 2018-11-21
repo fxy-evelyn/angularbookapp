@@ -1,0 +1,23 @@
+<div id="top">
+  <div id="search-box" [routerLink]="['../../search']">
+    <i class="glyphicon glyphicon-search"></i><span>请输入图书的名字/ISBN</span>
+  </div>
+</div>
+<div id="main">
+  <div id="scroll"><img [src]="srcPath"></div>
+  <div class="view" >
+
+    <div *ngFor="let item of sections" class="clear-fix">
+      <div class="view-title" [routerLink]="['../../bookList',{sectionId:item.Id}]">{{item.Name}} <i class="glyphicon glyphicon-menu-right"></i></div>
+      <div class="view-content">
+        <div *ngFor="let sectionBooks of item.Books;" [routerLink]="['../../detail',{bookId:sectionBooks.Book.Id}]">
+          <dl>
+            <dt><img src="{{sectionBooks.Book.Image}}"></dt>
+            <dd>{{sectionBooks.Book.Name|remark}}</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

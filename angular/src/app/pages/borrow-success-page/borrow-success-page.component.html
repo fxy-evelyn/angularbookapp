@@ -1,0 +1,18 @@
+<div id="main">
+    <div *ngIf="state" id="main-noBook">
+        <div><img src="assets/img/book.jpg"></div>
+        <div>暂无已借阅图书</div>
+      </div>
+
+  <div class="item" *ngFor="let item of borrowBooks;let i=index;">
+      <dl class="clearfix" >
+      <dt><img src="{{item.BookImage}}" [routerLink]="['../../detail',{bookId:item.BookId}]"/></dt>
+      <dd>{{item.BookName}}</dd>
+      <dd>{{item.AuthorName}}</dd>
+      <dd>{{item.PublisherName}}</dd>
+      <dd>{{item.CreateTime|date:'yyyy-MM-dd'}}</dd>
+      <dd>已归还</dd> 
+    </dl>
+  </div>
+</div>
+

@@ -1,0 +1,15 @@
+<div id="top"><i class="fa fa-arrow-left" (click)="location.back()"></i>用户重置密码</div>
+<form #formModel="ngForm" (submit)="form_onclick(formModel)">
+<div id="main">
+    <div id="main-top">
+        <div>
+            <i class="fa fa-lock"></i><input type="password" placeholder="请输入新密码" ngModel name="password" #password="ngModel" required pattern="\d{4}">
+            <span *ngIf="password.touched && password.invalid">
+              <span *ngIf="password.hasError('required')">密码不能为空</span>
+              <span *ngIf="password.hasError('pattern')">密码格式不正确</span>
+            </span>
+        </div>
+        <div><button class="btn btn-primary">确定</button></div>
+    </div>  
+</div>
+</form>
